@@ -4,12 +4,20 @@ body{
     background:#f4f8fb;
 }
 
-header{
-    background:#0057b8;
-    color:white;
-    padding:15px 30px;
-}
+<header>
+    <div class="container">
+        <h2 class="logo">Study in Türkiye Guide</h2>
 
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="universities.html">Universities</a> |
+            <a href="admissions.html">Admissions</a> |
+            <a href="scholarships.html">Scholarships</a> |
+            <a href="visa.html">Visa</a> |
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
 .container{
     display:flex;
     justify-content:space-between;
@@ -80,4 +88,12 @@ footer{
     padding:20px;
     margin-top:40px;
   }
+nav{
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
 
+nav a:hover{
+    color:#ffcc00;
+}
