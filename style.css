@@ -197,3 +197,10 @@ header{
 #menu a:hover{
     color:#8A6742;
     }
+    .menu-icon{
+    font-size:30px;
+    color:#333;
+    cursor:pointer;
+    display:block;
+    margin-right:15px;
+    }
