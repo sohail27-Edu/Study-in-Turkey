@@ -4,10 +4,9 @@ body{
     background:#f4f8fb;
 }
 header{
-    background:#0057b8;
+    background-color:#0057b8;
     padding:15px 30px;
 }
-
 .container{
     display:flex;
     justify-content:space-between;
