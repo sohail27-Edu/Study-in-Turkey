@@ -7,11 +7,26 @@ body{
 
 /* Header */
 
-header{
-    background:#F5EFE6;
-    padding:18px 35px;
-    border-bottom:1px solid #DDD4C8;
-}
+<header>
+    <div class="container">
+
+        <div class="menu-icon" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <h2 class="logo">Study in Türkiye Guide</h2>
+
+    </div>
+
+    <nav id="menu">
+        <a href="index.html">Home</a>
+        <a href="universities.html">Universities</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="scholarships.html">Scholarships</a>
+        <a href="visa.html">Visa</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
 /* Container */
 
@@ -142,6 +157,7 @@ nav{
 
 .hero h1{
     font-size:34px;
+    
 }
 
 .hero p{
@@ -152,4 +168,32 @@ nav{
     grid-template-columns:1fr;
 }
 
-        }
+header{
+    background:#F5EFE6;
+    padding:15px 25px;
+    border-bottom:1px solid #ddd;
+}
+
+.menu-icon{
+    font-size:30px;
+    cursor:pointer;
+    color:#333;
+}
+
+#menu{
+    display:none;
+    flex-direction:column;
+    padding:15px;
+    background:#F5EFE6;
+}
+
+#menu a{
+    text-decoration:none;
+    color:#333;
+    padding:12px 0;
+    font-weight:bold;
+}
+
+#menu a:hover{
+    color:#8A6742;
+    }
