@@ -174,33 +174,30 @@ header{
     border-bottom:1px solid #ddd;
 }
 
-.menu-icon{
-    font-size:30px;
-    cursor:pointer;
-    color:#333;
-}
-
 #menu{
     display:none;
     flex-direction:column;
-    padding:15px;
+    position:absolute;
+    top:70px;
+    left:15px;
     background:#F5EFE6;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    min-width:220px;
+    z-index:1000;
 }
-
 #menu a{
-    text-decoration:none;
+    display:block;
+    padding:12px;
     color:#333;
-    padding:12px 0;
+    text-decoration:none;
     font-weight:bold;
 }
 
 #menu a:hover{
-    color:#8A6742;
-    }
-    .menu-icon{
-    font-size:30px;
-    color:#333;
-    cursor:pointer;
-    display:block;
-    margin-right:15px;
-    }
+    background:#EFE7DA;
+    border-radius:6px;
+}
+
