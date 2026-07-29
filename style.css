@@ -33,8 +33,9 @@ nav ul{
 }
 
 nav a{
-    color:white;
+    color:black;
     text-decoration:none;
+    font-weight:bold;
 }
 
 .hero{
