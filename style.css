@@ -70,7 +70,9 @@ nav a{
     text-align:left;
     transition:0.3s;
 }
-
+.card:hover{
+    transform:translateY(-5px);
+}
 footer{
     background:#003366;
     color:white;
