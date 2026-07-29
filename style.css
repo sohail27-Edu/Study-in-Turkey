@@ -1,12 +1,20 @@
 body{
     margin:0;
-    font-family:Arial,sans-serif;
-    background:#f4f8fb;
+    font-family:Arial, sans-serif;
+    background:#FAF9F6;
+    color:#333333;
 }
+
+/* Header */
+
 header{
-    background-color:#0057b8;
-    padding:15px 30px;
+    background:#F5EFE6;
+    padding:18px 35px;
+    border-bottom:1px solid #DDD4C8;
 }
+
+/* Container */
+
 .container{
     display:flex;
     justify-content:space-between;
@@ -14,10 +22,14 @@ header{
     flex-wrap:wrap;
 }
 
+/* Logo */
+
 .logo{
-    color:white;
     margin:0;
+    color:#333333;
 }
+
+/* Navigation */
 
 nav{
     display:flex;
@@ -26,89 +38,118 @@ nav{
 }
 
 nav a{
-    color:white;
+    color:#333333;
     text-decoration:none;
     font-weight:bold;
+    transition:0.3s;
 }
 
 nav a:hover{
-    color:#ffcc00;
+    color:#8A6742;
 }
+
+/* Hero Section */
 
 .hero{
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
-                url("herojpg.jpg");
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 120px 20px;
-
+    background:linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+               url("herojpg.jpg");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:140px 20px;
 }
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+/* Buttons */
 
 .btn{
     display:inline-block;
     margin-top:20px;
-    padding:12px 25px;
-    background:#ffcc00;
+    padding:12px 26px;
+    background:#6B4F3A;
     color:white;
     text-decoration:none;
-    border-radius:5px;
+    border-radius:8px;
     font-weight:bold;
+    transition:0.3s;
 }
 
+.btn:hover{
+    background:#8A6742;
+}
+
+/* Sections */
+
 .features{
-    padding:40px 20px;
+    padding:50px 20px;
     text-align:center;
 }
+
+/* Cards */
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
     gap:25px;
     margin-top:30px;
-    }
+}
 
 .card{
     background:white;
-    padding:20px;
-    border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,.1);
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
     text-align:left;
     transition:0.3s;
 }
+
 .card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-8px);
 }
+
+/* Footer */
+
 footer{
-    background:#003366;
-    color:white;
+    background:#E8DFD1;
+    color:#333333;
     text-align:center;
-    padding:20px;
-    margin-top:40px;
-  }
-nav{
-    display:flex;
-    gap:12px;
-    align-items:center;
+    padding:25px;
+    margin-top:50px;
+    border-top:1px solid #DDD4C8;
 }
 
-nav a:hover{
-    color:#ffcc00;
-}
-nav{
-    display:flex;
-    flex-wrap:wrap;
+/* Mobile */
+
+@media (max-width:768px){
+
+.container{
+    flex-direction:column;
     gap:15px;
-    margin-top:10px;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
+nav{
+    justify-content:center;
 }
 
-nav a:hover{
-    color:#ffcc00;
-    }
+.hero h1{
+    font-size:34px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+        }
