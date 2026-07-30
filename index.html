@@ -7,29 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-    <div class="container">
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-        <div class="logo">
-    <h2>Study in Türkiye Guide</h2>
-        </div>
-    </div>
-
-<nav id="menu">
-    <div class="menu-header">
-    <h2>Study in Türkiye</h2>
+<header class="navbar">
+  <div class="nav-brand">
+    <h1>Study In Türkiye Guide</h1>
     <p>Your Education Guide</p>
-    </div>
-    <a href="javascript:void(0)" onclick="toggleMenu()">✖ Close</a>
-    <a href="index.html">🏠 Home</a>
-    <a href="universities.html">🎓 Universities</a>
-    <a href="admissions.html">📝 Admissions</a>
-    <a href="scholarships.html">💰 Scholarships</a>
-    <a href="visa.html">🛂 Visa</a>
-    <a href="contact.html">📞 Contact</a>
-</nav>
-</header>
+  </div>
+
+  <!-- Mobile Hamburger Button -->
+  <button class="menu-toggle" id="mobile-menu-open" aria-label="Open Menu">
+    ☰ Menu
+  </button>
+
+  <!-- Navigation Menu -->
+  <nav class="nav-menu" id="nav-menu">
+    <!-- Mobile-Only Close Button -->
+    <button class="close-btn" id="mobile-menu-close" aria-label="Close Menu">
+      ✖ Close
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="#">🏠 Home</a></li>
+      <li><a href="#">🎓 Universities</a></li>
+      <li><a href="#">📝 Admissions</a></li>
+      <li><a href="#">💰 Scholarships</a></li>
+      <li><a href="#">🛂 Visa</a></li>
+      <li><a href="#">📞 Contact</a></li>
+    </ul>
+  </nav>
+</header> 
+
 <section class="hero">
     <div class="hero-content">
         <h1>Study in Türkiye</h1>
