@@ -280,3 +280,88 @@ header{
     color:#333;
     z-index:10;
 }
+    /* --- Base Navigation Bar --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-brand h1 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.nav-brand p {
+  font-size: 0.8rem;
+  margin: 0;
+  color: #666;
+}
+
+/* --- Desktop Styles (Default) --- */
+.menu-toggle, 
+.close-btn {
+  display: none; /* Hide toggle controls on large screens */
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem; /* Separates the links clearly */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* --- Mobile Styles (Screens <= 768px) --- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show hamburger button on mobile */
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Keeps menu hidden off-screen */
+    width: 250px;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+    transition: right 0.3s ease-in-out;
+    padding: 2rem 1.5rem;
+    z-index: 1000;
+  }
+
+  /* When activated by JS, slide in from right */
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .close-btn {
+    display: block; /* Show close button in mobile drawer */
+    background: none;
+    border: none;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack items vertically on mobile */
+    gap: 1.5rem;
+  }
+      }
+    
