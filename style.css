@@ -217,3 +217,10 @@ header{
     font-size:14px;
     color:#666;
 }
+#menu{
+    display:none;
+}
+    
+.show-menu{
+    display:block !important;
+}
