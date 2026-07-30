@@ -93,11 +93,22 @@
 <footer>
     <p>© 2026 Study in Türkiye Guide | All Rights Reserved.</p>
 </footer>
+
 <script>
-function toggleMenu() {
-    var menu = document.getElementById("menu");
-    menu.classList.toggle("show-menu");
-}
+  const menuOpen = document.getElementById('mobile-menu-open');
+  const menuClose = document.getElementById('mobile-menu-close');
+  const navMenu = document.getElementById('nav-menu');
+
+  // Open the mobile drawer
+  menuOpen.addEventListener('click', () => {
+    navMenu.classList.add('active');
+  });
+
+  // Close the mobile drawer
+  menuClose.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+  });
 </script>
+    
     </body>
   </html>
