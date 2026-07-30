@@ -199,3 +199,21 @@ header{
 #menu a:hover{
     background:#EDE4D8;
 }
+.menu-header{
+    background:#E8DFD1;
+    padding:20px;
+    text-align:center;
+    border-bottom:1px solid #d6c9b8;
+}
+
+.menu-header h2{
+    margin:0;
+    font-size:22px;
+    color:#333;
+}
+
+.menu-header p{
+    margin-top:5px;
+    font-size:14px;
+    color:#666;
+}
