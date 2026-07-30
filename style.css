@@ -29,19 +29,27 @@ body{
 </header>
 
 /* Container */
-
 .container{
+    position:relative;
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    flex-wrap:wrap;
+    height:70px;
+    padding:0 20px;
 }
 
 /* Logo */
-
 .logo{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.logo h2{
     margin:0;
-    color:#333333;
+    font-size:26px;
+    color:#333;
+    font-weight:bold;
+    white-space:nowrap;
 }
 
 /* Navigation */
@@ -266,3 +274,9 @@ header{
     color:#555;
     font-size:16px;
 }   
+.menu-icon{
+    font-size:30px;
+    cursor:pointer;
+    color:#333;
+    z-index:10;
+}
