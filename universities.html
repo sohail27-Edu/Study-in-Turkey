@@ -123,6 +123,28 @@
 <footer>
 <p>© 2026 Study in Türkiye Guide</p>
 </footer>
+<script>
+const searchInput = document.getElementById("searchInput");
 
-</body>
+searchInput.addEventListener("keyup", function() {
+
+    let filter = searchInput.value.toLowerCase();
+
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(function(card) {
+
+        let title = card.querySelector("h3").textContent.toLowerCase();
+
+        if(title.includes(filter)){
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+});
+</script>
+</body>   
   </html>
