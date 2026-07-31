@@ -364,4 +364,32 @@ header{
     gap: 1.5rem;
   }
       }
+ /* Desktop Navigation */
+@media (min-width: 769px){
+
+    .menu-icon{
+        display:none;
+    }
+
+    #menu{
+        display:flex !important;
+        position:static;
+        width:auto;
+        height:auto;
+        background:none;
+        box-shadow:none;
+        padding:0;
+        gap:25px;
+        align-items:center;
+    }
+
+    #menu a{
+        border:none;
+        padding:10px;
+    }
+
+    .menu-header{
+        display:none;
+    }
+}   
     
