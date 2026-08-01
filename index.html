@@ -94,19 +94,17 @@
 </footer>
 
 <script>
-  const menuOpen = document.getElementById('mobile-menu-open');
-  const menuClose = document.getElementById('mobile-menu-close');
-  const navMenu = document.getElementById('nav-menu');
+const menuBtn = document.getElementById("menuBtn");
+const closeBtn = document.getElementById("closeBtn");
+const navbar = document.getElementById("navbar");
 
-  // Open the mobile drawer
-  menuOpen.addEventListener('click', () => {
-    navMenu.classList.add('active');
-  });
+menuBtn.addEventListener("click", () => {
+    navbar.classList.add("active");
+});
 
-  // Close the mobile drawer
-  menuClose.addEventListener('click', () => {
-    navMenu.classList.remove('active');
-  });
+closeBtn.addEventListener("click", () => {
+    navbar.classList.remove("active");
+});
 </script>
     
     </body>
