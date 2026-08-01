@@ -482,3 +482,44 @@ header{
 .menu-btn{
     display:none;
 }
+/* ===== MOBILE ===== */
+
+@media (max-width:768px){
+
+    .menu-btn{
+        display:block;
+    }
+
+    .navbar{
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:280px;
+        height:100vh;
+        background:#fff;
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:0;
+        padding:25px;
+        box-shadow:-5px 0 15px rgba(0,0,0,.15);
+        transition:right .3s ease;
+        z-index:1001;
+    }
+
+    .navbar.active{
+        right:0;
+    }
+
+    .close-btn{
+        display:block;
+        align-self:flex-end;
+        margin-bottom:20px;
+    }
+
+    .navbar a{
+        width:100%;
+        padding:15px 0;
+        border-bottom:1px solid #eee;
+    }
+}
