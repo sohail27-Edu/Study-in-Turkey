@@ -200,3 +200,80 @@ footer {
     color: var(--text-secondary);
     font-size: 0.875rem;
     }
+/* --- Testimonials Section --- */
+.testimonials {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--navy-heading);
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.testimonial-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.testimonial-card {
+    background: var(--bg-card);
+    padding: 1.75rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.student-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(227, 10, 23, 0.1);
+    color: var(--primary-red);
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.student-info h4 {
+    font-size: 1rem;
+    color: var(--navy-dark);
+    font-weight: 700;
+}
+
+.student-info p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.quote {
+    font-size: 0.925rem;
+    color: var(--text-primary);
+    line-height: 1.5;
+    font-style: italic;
+   }
