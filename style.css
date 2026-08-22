@@ -277,3 +277,78 @@ footer {
     line-height: 1.5;
     font-style: italic;
    }
+
+/* --- Interactive Roadmap --- */
+.roadmap-section {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.roadmap-section h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--navy-heading);
+    margin-bottom: 0.5rem;
+}
+
+.roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.step-card {
+    background: var(--bg-card);
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    border: 2px solid var(--border-light);
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.step-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(227, 10, 23, 0.4);
+}
+
+.step-card.active {
+    border-color: var(--primary-red);
+    background: linear-gradient(180deg, #FFFFFF 0%, #FFF5F5 100%);
+    box-shadow: var(--shadow-hover);
+}
+
+.step-badge {
+    display: inline-block;
+    background-color: var(--navy-dark);
+    color: var(--text-white);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.step-card.active .step-badge {
+    background-color: var(--primary-red);
+}
+
+.step-card h3 {
+    font-size: 1.15rem;
+    color: var(--navy-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.step-card p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+   }
+
