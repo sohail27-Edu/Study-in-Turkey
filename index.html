@@ -7,314 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary: #E30A17; /* Türkiye Red Accent */
-            --primary-hover: #C10813;
-            --dark: #0F172A;
-            --light-bg: #F8FAFC;
-            --white: #FFFFFF;
-            --text-main: #334155;
-            --text-muted: #64748B;
-            --border: #E2E8F0;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-            --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.08);
-            --radius: 12px;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-
-        body {
-            background-color: var(--light-bg);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
-
-        /* --- Header & Navigation --- */
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(8px);
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 5%;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .logo h2 {
-            font-size: 1.25rem;
-            font-weight: 800;
-            color: var(--dark);
-            letter-spacing: -0.02em;
-        }
-
-        .logo p {
-            font-size: 0.75rem;
-            color: var(--primary);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .navbar {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: var(--transition);
-            padding: 0.5rem 0.75rem;
-            border-radius: 8px;
-        }
-
-        .navbar a:hover {
-            color: var(--primary);
-            background-color: rgba(227, 10, 23, 0.05);
-        }
-
-        .menu-btn, .close-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--dark);
-            cursor: pointer;
-        }
-
-        /* --- Hero Section --- */
-        .hero {
-            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
-            color: var(--white);
-            padding: 5rem 5% 4rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(227, 10, 23, 0.15) 0%, transparent 60%);
-            pointer-events: none;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            letter-spacing: -0.03em;
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            color: #94A3B8;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--primary);
-            color: var(--white);
-            font-weight: 700;
-            padding: 0.85rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(227, 10, 23, 0.4);
-        }
-
-        .btn:hover {
-            background-color: var(--primary-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(227, 10, 23, 0.6);
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-top: 3.5rem;
-            padding-top: 2.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .stats h2 {
-            font-size: 2.25rem;
-            font-weight: 800;
-            color: var(--white);
-        }
-
-        .stats p {
-            font-size: 0.875rem;
-            color: #94A3B8;
-            margin-bottom: 0;
-        }
-
-        /* --- Services Section --- */
-        .features {
-            padding: 4rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .features h2 {
-            text-align: center;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 2.5rem;
-        }
-
-        <section class="roadmap-section">
-    <h2>Your 4-Step Journey to Türkiye</h2>
-    <p class="section-subtitle">A clear, straightforward path to starting your education abroad.</p>
-
-    <div class="roadmap-grid">
-        <div class="step-card active" onclick="selectStep(this)">
-            <div class="step-badge">Step 1</div>
-            <h3>Explore & Choose</h3>
-            <p>Browse 200+ public and private universities to find the perfect degree program and location for your goals.</p>
-        </div>
-
-        <div class="step-card" onclick="selectStep(this)">
-            <div class="step-badge">Step 2</div>
-            <h3>Prepare & Apply</h3>
-            <p>Gather your transcripts, language scores, and passport to submit a strong, complete application.</p>
-        </div>
-
-        <div class="step-card" onclick="selectStep(this)">
-            <div class="step-badge">Step 3</div>
-            <h3>Get Your Visa</h3>
-            <p>Receive your official acceptance letter and apply for a Turkish Student Visa at your local embassy.</p>
-        </div>
-
-        <div class="step-card" onclick="selectStep(this)">
-            <div class="step-badge">Step 4</div>
-            <h3>Arrive & Settle</h3>
-            <p>Fly to Türkiye, complete university registration, secure your student residence permit, and begin!</p>
-        </div>
-    </div>
-</section>
-        
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-            border-color: rgba(227, 10, 23, 0.2);
-        }
-
-        .card h3 {
-            font-size: 1.2rem;
-            color: var(--dark);
-            margin-bottom: 0.75rem;
-        }
-
-        .card p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        /* --- Footer --- */
-        footer {
-            text-align: center;
-            padding: 2rem 5%;
-            background: var(--white);
-            border-top: 1px solid var(--border);
-            color: var(--text-muted);
-            font-size: 0.875rem;
-        }
-
-        /* --- Mobile Responsive Layout --- */
-        @media (max-width: 768px) {
-            .menu-btn {
-                display: block;
-            }
-
-            .navbar {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 75%;
-                max-width: 300px;
-                height: 100vh;
-                background: var(--white);
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 5rem 2rem 2rem;
-                box-shadow: -5px 0 25px rgba(0,0,0,0.15);
-                transition: var(--transition);
-                z-index: 1001;
-            }
-
-            .navbar.active {
-                right: 0;
-            }
-
-            .close-btn {
-                display: block;
-                position: absolute;
-                top: 1.25rem;
-                right: 1.25rem;
-            }
-
-            .navbar a {
-                width: 100%;
-                font-size: 1.05rem;
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .stats {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -391,6 +84,37 @@
     </div>
 </section>
 
+<section class="roadmap-section">
+    <h2>Your 4-Step Journey to Türkiye</h2>
+    <p class="section-subtitle">A clear, straightforward path to starting your education abroad.</p>
+
+    <div class="roadmap-grid">
+        <div class="step-card active" onclick="selectStep(this)">
+            <div class="step-badge">Step 1</div>
+            <h3>Explore & Choose</h3>
+            <p>Browse 200+ public and private universities to find the perfect degree program and location for your goals.</p>
+        </div>
+
+        <div class="step-card" onclick="selectStep(this)">
+            <div class="step-badge">Step 2</div>
+            <h3>Prepare & Apply</h3>
+            <p>Gather your transcripts, language scores, and passport to submit a strong, complete application.</p>
+        </div>
+
+        <div class="step-card" onclick="selectStep(this)">
+            <div class="step-badge">Step 3</div>
+            <h3>Get Your Visa</h3>
+            <p>Receive your official acceptance letter and apply for a Turkish Student Visa at your local embassy.</p>
+        </div>
+
+        <div class="step-card" onclick="selectStep(this)">
+            <div class="step-badge">Step 4</div>
+            <h3>Arrive & Settle</h3>
+            <p>Fly to Türkiye, complete university registration, secure your student residence permit, and begin!</p>
+        </div>
+    </div>
+</section>
+
 <footer>
     <p>© 2026 Study in Türkiye Guide | All Rights Reserved.</p>
 </footer>
@@ -407,15 +131,13 @@ menuBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
     navbar.classList.remove("active");
 });
+
 function selectStep(element) {
     const cards = document.querySelectorAll('.step-card');
     cards.forEach(card => card.classList.remove('active'));
     element.classList.add('active');
 }
-    
-    
 </script>
 
 </body>
-    </html>
-    
+</html>
